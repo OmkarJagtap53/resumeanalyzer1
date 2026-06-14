@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resume History</title>
+</head>
+<body>
+
+<h2>Resume Upload History</h2>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>File Name</th>
+    <th>Score</th>
+    <th>Date</th>
+</tr>
+
+<tr th:each="resume : ${resumes}">
+    <td th:text="${resume.id}"></td>
+    <td th:text="${resume.fileName}"></td>
+    <td th:text="${resume.score}"></td>
+    <td th:text="${resume.uploadDate}"></td>
+</tr>
+
+</table>
+
+</body>
+</html>
